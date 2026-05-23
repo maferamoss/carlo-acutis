@@ -45,3 +45,4 @@ Acesse `https://localhost:5001` no navegador.
 ---
 
 *"Todos nascem como originais, mas muitos morrem como cópias." — Santo Carlo Acutis*
+Desenvolvido por **@maferamoss** com auxílio do **Claude (Anthropic)**
