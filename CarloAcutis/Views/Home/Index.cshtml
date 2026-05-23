@@ -1,0 +1,205 @@
+﻿@model (List<CarloAcutis.Models.Milagre> milagres, List<CarloAcutis.Models.Frase> frases, List<CarloAcutis.Models.MilagreIntercessao> milagresIntercessao)
+<!-- Hero  -->
+<section id="hero">
+    <div class="hero-inner">
+        <p class="hero-subtitulo">Beato</p>
+        <h1>Carlo Acutis</h1>
+        <p class="hero-descricao">
+            Um jovem do século XXI que usou a internet para levar Cristo ao mundo.
+            Faleceu aos 15 anos, em 2006, e foi beatificado em 2020.
+        </p>
+        <a href="~/#biografia" class="btn">Conheça sua história</a>
+
+    </div>
+</section>
+
+<!-- Galeria -->
+<section id="galeria">
+    <div class="container">
+        <h2>Galeria</h2>
+        <div class="galeria-grid">
+            <div class="galeria-item galeria-destaque">
+                <img src="~/imagens/carlo-1.jpg" alt="Carlo Acutis sorrindo" />
+                <span class="galeria-legenda">Carlo Acutis</span>
+            </div>
+            <div class="galeria-item">
+                <img src="~/imagens/carlo-2.jpg" alt="Carlo Acutis no computador" />
+                <span class="galeria-legenda">Apaixonado por tecnologia</span>
+            </div>
+            <div class="galeria-item">
+                <img src="~/imagens/carlo-3.jpg" alt="Túmulo de Carlo Acutis em Assis" />
+                <span class="galeria-legenda">Túmulo em Assis, Itália</span>
+            </div>
+            <div class="galeria-item">
+                <img src="~/imagens/carlo-4.jpg" alt="Carlo Acutis" />
+                <span class="galeria-legenda">Santo Carlo Acutis</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Biografia -->
+<selection id="biografia">
+    <div class="container">
+        <h2>Quem foi Carlo Acutis?</h2>
+        <div class="bio-grid">
+            <div class="bio-texto">
+               <p>
+                   Carlo Acutis nasceu em <strong>3 de maio de 1991</strong>  em Londres,
+                   filho de pais italianos, e cresceu em Milão. Desde pequeno demonstrou 
+                   uma fé profunda e uma devoçâo especial à Eucaristia, participando da
+                   missa diariamente.
+               </p>
+               <p>
+                   Apaixonado por informática, aprendeu a programar sozinho e criou um
+                   site catalogado <strong>milagres eucarísticos</strong> de todo o mundo - 
+                   exatamente o que esse projeto recria. Para ele, a internet era uma 
+                   ferramenta a serviço de Deus.
+               </p>
+               <p>
+                   Em outubro de 2006, foi diagnosticado com leucemia fulminante.
+                   Ofereceu seu sofrimento ao Papa e aos jovens do mundo.
+                   Faleceu em <strong>12 de outubro de 2006</strong>, com apenas 15 anos.
+                   Foi beatificado pelo Papa Francisco em <strong>10 de outubro de 2020</strong>
+               </p>
+            </div>
+            <div class="bio-dados">
+                <ul class="dados-lista">
+                    <li><span>🕊️ Nascimento</span> 3 de maio de 1991</li>
+                    <li><span>📍 Local</span> Londres, Reino Unido</li>
+                    <li><span>✝ Falecimento</span> 12 de outubro de 2006</li>
+                    <li><span>🌿 Beatificação</span> 10 de outubro de 2020</li>
+                    <li><span>💻 Dom</span> Programação e evangelização</li>
+                    <li><span>🙏 Padroeiro</span> Da internet e dos jovens</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</selection>
+
+<!--- Milagres --->
+<selection id="milagres">
+    <div class="container">
+        <h2>Milagres Eucarísticos</h2>
+        <p class="secao-descricao">
+            Carlo Catalogou mais de 150 milagres eucarísticos ao redor do mundo.
+            Aqui estão alguns dos mais conhecidos.
+        </p>
+        <div class="cards-grid">
+            @foreach (var milagre in Model.milagres)
+            {
+                <div class="card">
+                    <div class="card-header">
+                        <h3>@milagre.Titulo</h3>
+                        <span class="card-ano">@milagre.Ano</span>
+                    </div>
+                    <p class="card-local"> @milagre.Local, @milagre.Pais</p>
+                    <p class="card-descricao">@milagre.Descricao</p>
+                </div>
+            }
+        </div>
+    </div>
+</selection>
+
+<!-- Canonização -->
+<section id="canonizacao">
+    <div class="container">
+        <h2>Santo Carlo Acutis</h2>
+        <div class="canonizacao-box">
+            <div class="canonizacao-data">
+                <span class="data-dia">07</span>
+                <span class="data-mes">Setembro</span>
+                <span class="data-ano">2025</span>
+            </div>
+            <div class="canonizacao-texto">
+                <p>
+                    Em <strong>7 de setembro de 2025</strong>, Carlo Acutis foi canonizado
+                    pelo <strong>Papa Leão XIV</strong> na Praça de São Pedro, no Vaticano,
+                    tornando-se o <strong>primeiro santo da geração millennial</strong>.
+                </p>
+                <p>
+                    A cerimônia reuniu mais de <strong>80 mil pessoas</strong> e foi um
+                    marco histórico para a Igreja Católica. Carlo foi canonizado ao lado
+                    de Pier Giorgio Frassati, outro jovem italiano de vida santa.
+                </p>
+                <p class="canonizacao-detalhe">
+                    Seu corpo está exposto em um caixão de vidro na Igreja de Santa Maria
+                    Maggiore, em Assis — vestido com jeans, tênis e moletom, como ele
+                    gostava de andar.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Milagres de Intercessão -->
+<section id="intercessao">
+    <div class="container">
+        <h2>Milagres por sua Intercessão</h2>
+        <p class="secao-descricao">
+            Dois milagres foram reconhecidos pela Igreja Católica, abrindo o caminho
+            para a beatificação e canonização de Carlo.
+        </p>
+        <div class="intercessao-grid">
+            @foreach (var m in Model.milagresIntercessao)
+            {
+                <div class="intercessao-card">
+                    <span class="intercessao-badge @(m.Finalidade == "Beatificação" ? "badge-beato" : "badge-santo")">
+                        @m.Finalidade
+                    </span>
+                    <h3>@m.Beneficiado</h3>
+                    <p class="card-local">📍 @m.Local — @m.Ano</p>
+                    <p>@m.Descricao</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- Frases -->
+<selection id="frases">
+    <div class="container">
+        <h2>Palavras de Carlo</h2>
+        <div class="frases-grid">
+            @foreach (var frase in Model.frases)
+            {
+                <blockquote class="frasecard">
+                    <p>"@frase.Texto"</p>
+                    <cite>@frase.Contexto</cite>
+                </blockquote>
+            }
+        </div>
+    </div>
+</selection>
+
+<!-- Referencias -->
+<section id="referencias">
+    <div class="container">
+        <h2>Referências</h2>
+        <p class="secao-descricao">
+            Todo o conteúdo deste site foi baseado em fontes confiáveis e no trabalho original de Carlo Acutis.
+        </p>
+        <ul class="referencias-lista">
+            <li>
+                <span class="ref-categoria">Site Original</span>
+                <a href="https://www.carloacutis.com" target="_blank">carloacutis.com — Site oficial criado pelo próprio Carlo Acutis catalogando os milagres eucarísticos</a>
+            </li>
+            <li>
+                <span class="ref-categoria">Milagres Eucarísticos</span>
+                <a href="https://www.miracolieucaristici.org" target="_blank">miracolieucaristici.org — Exposição dos Milagres Eucarísticos do Mundo</a>
+            </li>
+            <li>
+                <span class="ref-categoria">Canonização</span>
+                <a href="https://www.vaticannews.va" target="_blank">Vatican News — Canonização de Carlo Acutis em 7 de setembro de 2025</a>
+            </li>
+            <li>
+                <span class="ref-categoria">Biografia</span>
+                <a href="https://www.carloacutis.com/en/association/to-know-carlo" target="_blank">Associação Carlo Acutis — Biografia oficial</a>
+            </li>
+            <li>
+                <span class="ref-categoria">Milagres de Intercessão</span>
+                <a href="https://agenciabrasil.ebc.com.br" target="_blank">Agência Brasil — Milagres reconhecidos para beatificação e canonização</a>
+            </li>
+        </ul>
+    </div>
+</section>
